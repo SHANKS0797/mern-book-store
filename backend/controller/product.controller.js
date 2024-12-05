@@ -13,7 +13,7 @@ export const getProducts = async (req, res) => {
 // -------------------- CREATE PRODUCT IN DB --------------------
 export const createProduct = async (req, res) => {
     const product = req.body
-    if (!product.name || !product.category || !product.author || !product.image || !product.image || !product.price || !product.price || !product.publication || !product.releaseDate) {
+    if (!product.name || !product.category || !product.author || !product.image || !product.price || !product.publication || !product.releaseDate) {
         return res.status(400).json({ success: false, message: "Please enter valid data" })
     }
     const newProduct = new Product(product)

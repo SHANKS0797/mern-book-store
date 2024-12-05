@@ -21,6 +21,15 @@ const productSchema = new mongoose.Schema({
     },
     releaseDate: {
         type: String, required: true
+    },
+    isLatest: {
+        type: Boolean
+    },
+    isTrending: {
+        type: Boolean
+    },
+    isBestSelling: {
+        type: Boolean
     }
 },
 )
